@@ -1,75 +1,187 @@
 <!DOCTYPE html>
-
-<html dir="rtl">
-
+<html dir="rtl" lang="he">
 <head>
-    <meta charset="UTF-8">
-    <title>גדליה</title>
-
-    <style>
-        table {
-            border-collapse: collapse; 
-            border-spacing: 0;
-            width: 50%;
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 5px; 
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>גדליה</title>
+  <link rel="stylesheet" href="guedalia.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
-    <h1>FSWD</h1>
-    <h4>מכון לב</h4>
+  <!-- Header: logo on the left, title FSWD on the same row -->
+  <header class="site-header" aria-label="כותרת האתר">
+    <h1 class="site-title">FSWD</h1>
+    <img class="logo" src="images/fullstacklogo.png" alt="לוגו הקורס FSWD" />
+  </header>
 
-    <img src="images/fullstacklogo.png" alt="תמונה של גדליה" align="left" width="200" height="200">
-
-    <ul style="margin-top: 200px;">
-        <li><a href="#1">תיאור</a></li>
-        <li><a href="#2">משתתפים</a></li>
-        <li><a href="#3">רשמים</a></li>
+  <!-- Fixed side navigation on the right -->
+  <nav class="side-nav" aria-label="רשימת נושאים">
+    <ul>
+      <li><a href="#section-description">תיאור</a></li>
+      <li><a href="#section-participants">משתתפים</a></li>
+      <li><a href="#section-impressions">רשמים</a></li>
+      <li><a href="#section-links">קישורים שימושיים</a></li>
+      <li><a href="#section-form">טופס משוב</a></li>
     </ul>
+  </nav>
 
-    <h2 id="1">תיאור</h2>
-    <p>הקורס פולסטאק הוא קורס מקיף לפיתוח אתרים, המשלב טכנולוגיות צד לקוח וצד שרת.</p>
-    <p>במהלך הקורס, המשתתפים ילמדו על HTML, CSS, JavaScript, React, Node.js ועוד.</p>
-    <p>הקורס כולל פרויקטים מעשיים, תרגולים והדרכות ממומחים בתעשייה.</p>
+  <!-- Main content is nudged to the left (margin-right) to leave room for the side nav -->
+  <main class="content" id="main-content">
+    <h4 class="subtitle">מכון לב</h4>
 
-    <h2 id="2">משתתפים</h2>
-    <table border="1">
-        <tr>
-            <th>שם</th>
-            <th>טלפון</th>
-            <th>מייל</th>
-        </tr>
-        <tr>
-            <td>יוסי כהן</td>
-            <td>050-1234567</td>
-            <td>yossi@example.com</td>
-        </tr>
-        <tr>
-            <td>שרה לוי</td>
-            <td>052-7654321</td>
-            <td>sara@example.com</td>
-        </tr>
-        <tr>
-            <td>דוד ישראלי</td>
-            <td>054-9876543</td>
-            <td>david@example.com</td>
-        </tr>
-    </table>
+    <section id="section-description">
+      <h2>תיאור</h2>
+      <p>הקורס פולסטאק הוא קורס מקיף לפיתוח אתרים, המשלב טכנולוגיות צד לקוח וצד שרת.</p>
+      <p>במהלך הקורס, המשתתפים ילמדו על HTML, CSS, JavaScript, React, Node.js ועוד.</p>
+      <p>הקורס כולל פרויקטים מעשיים, תרגולים והדרכות ממומחים בתעשייה.</p>
+    </section>
 
-    <h2 id="3">רשמים</h2>
-    <img src="images/html.png" alt="תמונה של רשמים" align="left" width="200" height="200" style="padding: 10px; border: 20px solid black;">
-    <img src="images/js.png" alt="תמונה של רשמים" align="left" width="200" height="200" style="padding: 10px; border: 20px solid rgb(206, 104, 104);">
-    <img src="images/react.png" alt="תמונה של רשמים" align="left" width="200" height="200" style="padding: 10px; border: 20px solid rgb(104, 206, 104);">
+    <section id="section-participants">
+      <h2>משתתפים</h2>
+      <div class="table-wrap">
+        <table class="participants">
+          <thead>
+            <tr>
+              <th>שם</th>
+              <th>טלפון</th>
+              <th>מייל</th>
+              <th>ברכת אודיו</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>יוסי כהן</td>
+              <td>050-1234567</td>
+              <td><a href="mailto:yossi@example.com">yossi@example.com</a></td>
+              <td>
+                <audio controls preload="none">
+                  <source src="audio/yossi.mp3" type="audio/mpeg" />
+                  הדפדפן שלך לא תומך בנגן אודיו.
+                </audio>
+              </td>
+            </tr>
+            <tr>
+              <td>שרה לוי</td>
+              <td>052-7654321</td>
+              <td><a href="mailto:sara@example.com">sara@example.com</a></td>
+              <td>
+                <audio controls preload="none">
+                  <source src="audio/sara.mp3" type="audio/mpeg" />
+                  הדפדפן שלך לא תומך בנגן אודיו.
+                </audio>
+              </td>
+            </tr>
+            <tr>
+              <td>דוד ישראלי</td>
+              <td>054-9876543</td>
+              <td><a href="mailto:david@example.com">david@example.com</a></td>
+              <td>
+                <audio controls preload="none">
+                  <source src="audio/david.mp3" type="audio/mpeg" />
+                  הדפדפן שלך לא תומך בנגן אודיו.
+                </audio>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    <h2 style="margin-top: 300px;">קישורים שימושיים</h2>
-    <a href="scrimba.com/learn/htmlandcss">קישור לקורס HTML ו-CSS</a><br>
-    <a href="scrimba.com/learn/learnjavascript">קישור לקורס JavaScript</a><br>
-    <a href="scrimba.com/learn/learnreact">קישור לקורס React</a><br>
+    <section id="section-impressions">
+      <h2>רשמים</h2>
+
+      <!-- Images -->
+      <div class="media-grid">
+        <img src="images/html.png" alt="HTML" class="media-img img-solid" />
+        <img src="images/js.png" alt="JavaScript" class="media-img img-solid red" />
+        <img src="images/react.png" alt="React" class="media-img img-solid green" />
+      </div>
+
+      <!-- Videos (same size as images, different frame style) -->
+      <div class="media-grid">
+        <video class="media-img video-frame" controls preload="none">
+          <source src="videos/lesson1.mp4" type="video/mp4" />
+          הדפדפן שלך לא תומך בנגן וידאו.
+        </video>
+        <video class="media-img video-frame" controls preload="none">
+          <source src="videos/lesson2.mp4" type="video/mp4" />
+          הדפדפן שלך לא תומך בנגן וידאו.
+        </video>
+        <video class="media-img video-frame" controls preload="none">
+          <source src="videos/lesson3.mp4" type="video/mp4" />
+          הדפדפן שלך לא תומך בנגן וידאו.
+        </video>
+      </div>
+    </section>
+
+    <section id="section-links">
+      <h2>קישורים שימושיים</h2>
+      <ul class="useful-links">
+        <li><a target="_blank" rel="noopener" href="https://scrimba.com/learn/htmlandcss">קורס HTML ו-CSS</a></li>
+        <li><a target="_blank" rel="noopener" href="https://scrimba.com/learn/learnjavascript">קורס JavaScript</a></li>
+        <li><a target="_blank" rel="noopener" href="https://scrimba.com/learn/learnreact">קורס React</a></li>
+      </ul>
+    </section>
+
+    <section id="section-form">
+      <h2>טופס משוב</h2>
+      <!-- A simple, accessible form with mixed input types -->
+      <form class="feedback-form" action="#" method="post">
+        <!-- Name -->
+        <label for="name">שם מלא</label>
+        <input id="name" name="name" type="text" placeholder="שם מלא" required />
+
+        <!-- Email -->
+        <label for="email">דוא״ל</label>
+        <input id="email" name="email" type="email" placeholder="your@email.com" required />
+
+        <!-- Select -->
+        <label for="topic">נושא ראשי</label>
+        <select id="topic" name="topic" required>
+          <option value="" disabled selected>בחר/י נושא</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+          <option value="react">React</option>
+          <option value="node">Node.js</option>
+        </select>
+
+        <!-- Checkboxes -->
+        <fieldset class="checks">
+          <legend>מה אהבת בקורס? (ניתן לבחור כמה)</legend>
+          <label><input type="checkbox" name="likes" value="practice" /> תרגול מעשי</label>
+          <label><input type="checkbox" name="likes" value="projects" /> פרויקטים</label>
+          <label><input type="checkbox" name="likes" value="pace" /> קצב הלמידה</label>
+          <label><input type="checkbox" name="likes" value="support" /> תמיכה וליווי</label>
+        </fieldset>
+
+        <!-- Radios -->
+        <fieldset class="radios">
+          <legend>רמת שביעות רצון כללית</legend>
+          <label><input type="radio" name="satisfaction" value="1" required /> 1</label>
+          <label><input type="radio" name="satisfaction" value="2" /> 2</label>
+          <label><input type="radio" name="satisfaction" value="3" /> 3</label>
+          <label><input type="radio" name="satisfaction" value="4" /> 4</label>
+          <label><input type="radio" name="satisfaction" value="5" /> 5</label>
+        </fieldset>
+
+        <!-- Textarea -->
+        <label for="message">הודעה / משוב חופשי</label>
+        <textarea id="message" name="message" rows="4" placeholder="כתבו כאן את המשוב שלכם..."></textarea>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit">שליחה</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="סוף העמוד">
+    <small>&copy; <span id="year"></span> FSWD – כל הזכויות שמורות.</small>
+  </footer>
+
+  <script>
+    // Set current year; tiny progressive enhancement
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
