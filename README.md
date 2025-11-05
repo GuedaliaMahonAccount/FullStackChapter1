@@ -47,8 +47,6 @@ Covers semantic HTML, CSS Grid/Flexbox, forms, tables, media, internal/external 
     layout.css
     components.css
     pages.css
-  /js
-    main.js
   index.html
   destinations.html
   flight.html
@@ -111,6 +109,155 @@ Covers semantic HTML, CSS Grid/Flexbox, forms, tables, media, internal/external 
 | Responsiveness (all pages) | Both | Both | ☐ |
 | Final QA + light animations | Both | — | ☐ |
 | “Site Map” demo page | Both | — | ☐ |
+
+
+
+# 🎨 General Design System – Flight Booking Website
+
+## 🧱 Overview
+A unified visual language for all pages, ensuring **consistency, clarity, and responsiveness**.  
+The design aims to evoke **trust, simplicity, and a modern travel experience**.
+
+---
+
+## 🎨 Color Palette
+
+| Purpose | Variable | Color | Usage |
+|----------|-----------|-------|--------|
+| **Background** | `--bg` | `#F7FAFC` | Light neutral background for clarity. |
+| **Surface (cards, navbar)** | `--surface` | `#FFFFFF` | White background for elevated elements. |
+| **Primary (Brand)** | `--primary` | `#0A66C2` | Main airline blue tone for links and buttons. |
+| **Primary Hover** | `--primary-600` | `#0959A9` | Darker shade for hover interactions. |
+| **Accent (CTA / Highlights)** | `--accent` | `#FFB100` | Used for “Book Now” buttons or promotions. |
+| **Accent Hover** | `--accent-600` | `#E6A100` | Slightly darker accent hover color. |
+| **Text (Main)** | `--text` | `#0F172A` | Strong, readable text color. |
+| **Text (Muted)** | `--text-muted` | `#475569` | For secondary information and placeholders. |
+| **Borders / Lines** | `--line` | `#E2E8F0` | Light dividers between sections. |
+| **Success / Error** | `--success` / `--danger` | `#16A34A` / `#DC2626` | For form feedback messages. |
+
+---
+
+## ✍️ Typography
+
+| Type | Font Size | Weight | Notes |
+|------|------------|---------|-------|
+| **h1** | 40px (mobile: 32px) | 700 | Main page titles |
+| **h2** | 28px (mobile: 24px) | 700 | Section titles |
+| **h3** | 22px | 600 | Subtitles |
+| **Paragraph (p)** | 16px | 400 | Main text |
+| **Small / Note** | 14px | 400 | Secondary info, hints |
+
+- **Font Family:** `"Heebo", "Rubik", Arial, "Segoe UI", sans-serif`
+- **Line height:** `1.6`
+- **Base font size:** `16px`
+
+---
+
+## 📏 Spacing & Sizing
+- **Spacing scale (px):** 4, 8, 12, 16, 24, 32, 48, 64  
+- **Button/Input height:** 44–48px  
+- **Card padding:** 16–24px  
+- **Icon size:** 20–24px  
+- **Border radius:** 12px (rounded corners)  
+- **Container max width:** `1200px`
+
+---
+
+## 📱 Breakpoints (Responsive Design)
+| Device | Width |
+|---------|--------|
+| **Mobile** | ≤480px |
+| **Tablet** | 481–768px |
+| **Laptop** | 769–1024px |
+| **Desktop** | ≥1280px |
+
+---
+
+## 🧩 UI Components
+
+### 🧭 Navbar
+- Sticky top bar with white background and subtle shadow.  
+- Height: 64–72px.  
+- Logo on the right (RTL) or left (LTR), and CTA button on the opposite side.  
+
+### 💳 Cards
+- Background: white (`--surface`)  
+- Rounded corners (`12px`)  
+- Drop shadow for elevation (`var(--shadow-1)`)  
+- Internal padding: `16–24px`  
+- Contains: image (16:9 ratio), title, short description, and “Book Now” button.
+
+### 🧾 Forms
+- Input height: `48px`, border: `1px solid var(--line)`  
+- Focus state: border-color `--primary`, light blue focus ring.  
+- Error messages: red text (`--danger`), small font.  
+- Submit button: primary or accent color.
+
+### 💰 Tables
+- Clean table with subtle borders (`--line`)  
+- Header row (`<thead>`) has gray background `#F1F5F9`  
+- Right-aligned numeric values for RTL text.  
+
+### 🔘 Buttons
+| Type | Background | Text | Border | Use |
+|------|-------------|------|--------|-----|
+| **Primary** | `--primary` | White | None | Main actions |
+| **Accent** | `--accent` | Dark text | None | CTA / promotions |
+| **Secondary** | `--surface` | `--text` | `--line` | Neutral actions |
+
+- Hover: darker shade  
+- Active: light translateY(1px) effect  
+- Border radius: 12px
+
+---
+
+## 🌈 Accessibility
+- **Contrast ratio:** minimum 4.5:1 for body text.  
+- **Alt text:** required for all images.  
+- **Keyboard focus:** clear visible outline.  
+- **Responsive typography:** scales at 480px and 1024px.  
+
+---
+
+## 🧱 Example CSS Variables (Base Styles)
+
+```css
+:root {
+  --bg: #F7FAFC;
+  --surface: #FFFFFF;
+  --text: #0F172A;
+  --text-muted: #475569;
+  --line: #E2E8F0;
+  --primary: #0A66C2;
+  --primary-600: #0959A9;
+  --accent: #FFB100;
+  --accent-600: #E6A100;
+  --success: #16A34A;
+  --danger: #DC2626;
+  --font-family: "Heebo", "Rubik", Arial, "Segoe UI", sans-serif;
+  --radius: 12px;
+  --container: 1200px;
+  --shadow-1: 0 2px 10px rgba(15, 23, 42, 0.06);
+  --shadow-2: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+```
+
+---
+
+## ✈️ Summary
+This shared design system provides:
+- **Consistent colors and spacing** across all pages.  
+- **Readable, modern typography** optimized for Hebrew and English.  
+- **Accessible and responsive** layouts that adapt to any device.  
+- **Reusable components** (navbar, cards, forms, tables, buttons) that keep the site cohesive.
+
+---
+
+✅ **Goal:** Both partners use this same design base so that each page feels unified and professional.
+
+
+
+
 
 ## 🌈 Optional Enhancements
 - Tiny JS: hamburger menu, image carousel.
