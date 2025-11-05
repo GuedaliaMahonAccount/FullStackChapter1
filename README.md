@@ -99,11 +99,12 @@ The project will be in english only
 ## 📋 Starter Task Board
 | Task | Primary (Round 1) | Secondary (Rotation) | Status |
 |---|---|---|---|
-| Repo + structure + base CSS | Both | — | ☐ |
-| Home (Hero, Search, Highlights) | A | B (responsive/polish) | ☐ |
+| Repo + structure + base CSS | Both | — | ✅ |
+| Home (Hero, Search, Highlights) | A | B (responsive/polish) | ✅ |
 | Destinations (Grid + static filters) | B | A | ☐ |
 | Flight Details (table + form) | B | A | ☐ |
-| Contact (full form + map) | A | B | ☐ |
+| Contact (full form + map) | A | B | ✅ |
+| Thank You page | A | - | ✅ |
 | FAQ (lists + anchors) | A | B | ☐ |
 | About (media/embed) | B | A | ☐ |
 | Policy (text + anchors) | B | A | ☐ |
