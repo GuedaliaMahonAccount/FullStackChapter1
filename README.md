@@ -105,7 +105,7 @@ The project will be in english only
 | Flight Details (table + form) | B | A | ☐ |
 | Contact (full form + map) | A | B | ✅ |
 | Thank You page | A | - | ✅ |
-| FAQ (lists + anchors) | A | B | ☐ |
+| FAQ (lists + anchors) | A | B | ✅ |
 | About (media/embed) | B | A | ☐ |
 | Policy (text + anchors) | B | A | ☐ |
 | Gallery (Grid + captions) | A | B | ☐ |
