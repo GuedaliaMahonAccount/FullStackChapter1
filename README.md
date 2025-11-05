@@ -5,6 +5,7 @@
 A **static, responsive, and content-rich** website simulating an **international flight booking service**.  
 Covers semantic HTML, CSS Grid/Flexbox, forms, tables, media, internal/external links, and full responsiveness.
 
+The project will be in english only
 ## 🎯 Objectives
 - Build a **multi-page static site** with **HTML5 + CSS3**.  
 - Use **semantic HTML**, **Grid**, and **Flexbox**.  
