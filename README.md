@@ -113,9 +113,12 @@ Covers semantic HTML, CSS Grid/Flexbox, forms, tables, media, internal/external 
 | “Site Map” demo page | Both | — | ☐ |
 
 ## 🌈 Optional Enhancements
-- Tiny JS: hamburger menu, image carousel, **“flight cart” counter** (localStorage).
+- Tiny JS: hamburger menu, image carousel.
 - `thank-you.html` after form submissions.
 - Basic SEO tags (`title`, `meta description`).
+
+We don't use localestorage on this part
+We will make like it work, but it s not
 
 ## 🧑‍💻 Authors
 **Partner A:** Guedalia
