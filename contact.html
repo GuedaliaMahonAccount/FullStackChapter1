@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact Us | SkyWays</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <header>
+        <!-- navbar -->
+        <nav class="navbar container" aria-label="Primary">
+            <a class="logo" href="index.html">
+                <picture>
+                    <source srcset="assets/icons/logo-stacked.png" media="(max-width: 768px)">
+                    <img src="assets/icons/logo-horizontal.png" alt="SkyWays logo" />
+                </picture>
+            </a>
+            <ul class="nav-links">
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="flight.html">Flights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container">
+        <h1>Contact Us</h1>
+        <p class="lead">Questions about bookings, changes, or groups? We’re here to help.</p>
+
+        <section class="contact-grid" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" class="sr-only">Contact form and office information</h2>
+
+            <article class="card form-card">
+                <form action="thank-you.html" method="get" novalidate>
+                    <fieldset>
+                        <legend class="h3">Send us a message</legend>
+
+                        <div class="form-row">
+                            <label for="fullName">Full Name<span aria-hidden="true"> *</span></label>
+                            <input id="fullName" name="fullName" type="text" required placeholder="John Doe"
+                                autocomplete="name" />
+                        </div>
+
+                        <div class="form-row">
+                            <label for="email">Email<span aria-hidden="true"> *</span></label>
+                            <input id="email" name="email" type="email" required inputmode="email"
+                                placeholder="you@example.com" autocomplete="email" />
+                        </div>
+
+                        <div class="form-row">
+                            <label for="phone">Phone</label>
+                            <input id="phone" name="phone" type="tel" inputmode="tel" pattern="^[0-9+\-\s()]{7,}$"
+                                title="Please enter a valid phone number" placeholder="+972 50-000-0000"
+                                autocomplete="tel" />
+                        </div>
+
+                        <div class="form-row">
+                            <label for="subject">Subject<span aria-hidden="true"> *</span></label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option>Booking Question</option>
+                                <option>Change / Cancellation</option>
+                                <option>Group Travel</option>
+                                <option>Baggage & Seats</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="message">Message<span aria-hidden="true"> *</span></label>
+                            <textarea id="message" name="message" required rows="6"
+                                placeholder="How can we help?"></textarea>
+                        </div>
+
+                        <div class="form-row checkbox-row">
+                            <input id="agree" name="agree" type="checkbox" required />
+                            <label for="agree">I agree to the <a href="policy.html#pricing">pricing</a> and <a
+                                    href="policy.html#cancellations">cancellation</a> policies.</label>
+                        </div>
+
+                        <p id="form-help" class="help-text">Fields marked with * are required.</p>
+
+                        <div class="form-actions">
+                            <button class="btn btn-primary" type="submit">Send Message</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <hr class="sep" aria-hidden="true" />
+                <p class="small">
+                    Helpful links:
+                    <a href="faq.html#changes">FAQ: Changes</a> ·
+                    <a href="policy.html#cancellations">Policy: Cancellations</a> ·
+                    <a href="https://www.iata.org/" target="_blank" rel="noopener">IATA</a>
+                </p>
+            </article>
+
+            <aside class="card info-card">
+                <h3>Office & Support</h3>
+                <p class="muted">Prefer to contact us directly? Use the details below.</p>
+
+                <ul class="contact-list">
+                    <li>Email: <a href="mailto:support@skyways.example">support@skyways.example</a></li>
+                    <li>Phone: <a href="tel:+972500000000">+972 50 000 0000</a></li>
+                    <li>Address: Ben Gurion Airport, Terminal 3, Israel</li>
+                </ul>
+            </aside>
+        </section>
+
+
+        <table class="hours-table">
+            <caption>Customer Service Hours (Local Time)</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Sunday–Thursday</th>
+                    <td>08:00 – 18:00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Friday</th>
+                    <td>08:00 – 13:00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Saturday</th>
+                    <td>Closed</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="map-wrap" aria-label="Office location map">
+            <iframe title="SkyWays Office Location"
+                src="https://www.google.com/maps?q=Ben+Gurion+Airport,+Israel&output=embed" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+            </iframe>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SkyWays Airlines. All rights reserved.</p>
+
+            <ul class="footer-links">
+                <li><a href="policy.html">Policy</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.iata.org/" target="_blank" rel="noopener">IATA</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

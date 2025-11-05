@@ -56,6 +56,7 @@ The project will be in english only
   faq.html
   policy.html
   gallery.html
+  thank-you.html
 ```
 
 ## 👥 Equal Remote Work (Rotation)
