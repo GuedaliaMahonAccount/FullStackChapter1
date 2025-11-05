@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ – Flight Booking</title>
+    <meta name="description"
+        content="Frequently asked questions about bookings, cancellations, changes, insurance, and pricing." />
+
+    <!-- קבצי ה-CSS הגלובליים (כבר קיימים בפרויקט שלך) -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+</head>
+
+<body>
+    <header>
+        <!-- navbar -->
+        <nav class="navbar container" aria-label="Primary">
+            <a class="logo" href="index.html">
+                <picture>
+                    <source srcset="assets/icons/logo-stacked.png" media="(max-width: 768px)">
+                    <img src="assets/icons/logo-horizontal.png" alt="SkyWays logo" />
+                </picture>
+            </a>
+            <ul class="nav-links">
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="flight.html">Flights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content" class="container faq-container" role="main">
+        <h1 class="page-title">Frequently Asked Questions</h1>
+
+        <nav class="faq-toc" aria-label="FAQ sections">
+            <h2 class="visually-hidden">On this page</h2>
+            <ul class="toc-list">
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#cancellations">Cancellations</a></li>
+                <li><a href="#changes">Name & Date Changes</a></li>
+                <li><a href="#insurance">Insurance</a></li>
+                <li><a href="#pricing">Payments & Pricing</a></li>
+            </ul>
+        </nav>
+
+        <section id="booking" aria-labelledby="booking-title" class="faq-section">
+            <h2 id="booking-title">Booking</h2>
+            <details class="faq-item" id="q-book-1">
+                <summary><span>How do I search and book a flight?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        Use the search form on the <a href="index.html">Home</a> page to select dates, origin, and
+                        destination.
+                        Then review fare options and continue to the <a href="flight.html">Flight Details</a> page to
+                        complete your booking.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a> ·
+                        <a href="policy.html#pricing">See Pricing Policy</a>
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq-item" id="q-book-2">
+                <summary><span>Which payment methods are accepted?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        We accept major credit and debit cards. Additional fees and currency conversion, if any, are
+                        described in the
+                        <a href="policy.html#pricing">Pricing & Fees Policy</a>.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a>
+                    </p>
+                </div>
+            </details>
+        </section>
+
+        <section id="cancellations" aria-labelledby="cancellations-title" class="faq-section">
+            <h2 id="cancellations-title">Cancellations</h2>
+            <details class="faq-item" id="q-cancel-1">
+                <summary><span>Can I cancel my ticket and get a refund?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        It depends on your fare rules. Promotional fares are often non-refundable, while flexible fares
+                        may allow cancellations with a fee.
+                        See the <a href="policy.html#cancellations">Cancellations Policy</a>.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a> ·
+                        <a href="policy.html#cancellations">Read full policy</a>
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq-item" id="q-cancel-2">
+                <summary><span>How do I request a cancellation?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        Submit a request via the <a href="contact.html">Contact</a> page and choose “Cancellation” in
+                        the subject.
+                        Include your full name and itinerary number.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a>
+                    </p>
+                </div>
+            </details>
+
+        </section>
+
+        <section id="changes" aria-labelledby="changes-title" class="faq-section">
+            <h2 id="changes-title">Name & Date Changes</h2>
+            <details class="faq-item" id="q-change-1">
+                <summary><span>Can I change the passenger name?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        Some airlines allow minor name corrections; full name changes are usually treated as
+                        cancel-and-rebook.
+                        Check the <a href="policy.html#changes">Changes Policy</a> and your airline rules.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a> ·
+                        <a href="policy.html#changes">Read full policy</a>
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq-item" id="q-change-2">
+                <summary><span>How do I change travel dates after booking?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        Open your booking on the <a href="flight.html">Flight Details</a> page and review change
+                        options.
+                        Date changes may incur fare differences and service fees depending on fare class.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a>
+                    </p>
+                </div>
+            </details>
+
+        </section>
+
+        <section id="insurance" aria-labelledby="insurance-title" class="faq-section">
+            <h2 id="insurance-title">Insurance</h2>
+            <details class="faq-item" id="q-ins-1">
+                <summary><span>Do you offer travel insurance?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        We provide links to partner insurers during checkout. Coverage varies by country and plan.
+                        Always read the policy wording before purchase.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a>
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq-item" id="q-ins-2">
+                <summary><span>Where can I check travel advisories?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        Consult official travel advice before booking:
+                        <a href="https://www.gov.uk/foreign-travel-advice" target="_blank" rel="noopener">UK Travel
+                            Advice</a>,
+                        <a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/"
+                            target="_blank" rel="noopener">US Travel Advisories</a>.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a>
+                    </p>
+                </div>
+            </details>
+
+        </section>
+
+        <section id="pricing" aria-labelledby="pricing-title" class="faq-section">
+            <h2 id="pricing-title">Payments & Pricing</h2>
+            <details class="faq-item" id="q-price-1">
+                <summary><span>Are prices shown final?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        Prices include mandatory taxes and fees. Optional services (extra baggage, seat selection) are
+                        added at checkout.
+                        See <a href="policy.html#pricing">Pricing Policy</a> for details.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a>
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq-item" id="q-price-2">
+                <summary><span>Which currency will I be charged in?</span></summary>
+                <div class="faq-content">
+                    <p>
+                        You’re charged in the currency shown at payment. Your bank may apply conversion fees.
+                        We use a secure payment processor and do not store card details.
+                    </p>
+                    <p class="faq-links">
+                        <a href="#content">Back to top ↑</a>
+                    </p>
+                </div>
+            </details>
+
+        </section>
+
+        <aside class="faq-cta">
+            <p>Didn’t find your answer? Reach us on the <a href="contact.html">Contact</a> page.</p>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SkyWays Airlines. All rights reserved.</p>
+
+            <ul class="footer-links">
+                <li><a href="policy.html">Policy</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.iata.org/" target="_blank" rel="noopener">IATA</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
