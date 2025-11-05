@@ -1,60 +1,41 @@
-# 🛍️ Online Judaica Store  
-### *Full-Stack Web Development – Static Website Project (Units 13–20)*  
+# ✈️ Flight Booking Website  
+### *Full-Stack Web Development – Static Website Project (Units 13–20)*
 
----
+## 📘 Project Overview
+A **static, responsive, and content-rich** website simulating an **international flight booking service**.  
+Covers semantic HTML, CSS Grid/Flexbox, forms, tables, media, internal/external links, and full responsiveness.
 
-## 📘 Project Overview  
-A **static, content-rich, and fully responsive** website simulating an **online Judaica store**.  
-This project meets all requirements of **Units 13–20** in the Full-Stack Web Development course, focusing on **HTML5**, **CSS3**, responsive design, and teamwork.
+## 🎯 Objectives
+- Build a **multi-page static site** with **HTML5 + CSS3**.  
+- Use **semantic HTML**, **Grid**, and **Flexbox**.  
+- Include **forms**, **tables**, **media embeds**, and **anchors/links**.  
+- Ensure **mobile/tablet/desktop** responsiveness.  
+- **Equal remote collaboration** in pairs via GitHub.
 
----
-
-## 🎯 Objectives  
-- Build a **multi-page static website** using HTML, CSS, and media assets.  
-- Practice **semantic HTML**, **Flexbox**, and **Grid** for layout.  
-- Implement **forms**, **tables**, **lists**, **media embeds**, and **navigation**.  
-- Ensure **full responsiveness** across mobile, tablet, and desktop.  
-- Work **remotely in pairs**, maintaining equal participation and coverage of all technologies.
-
----
-
-## 🧭 Site Structure (Sitemap)
-
+## 🧭 Sitemap
 | Page | File | Description |
-|------|------|-------------|
-| **Home** | `index.html` | Hero section, featured categories, image gallery, and internal/external links. |
-| **Catalog** | `catalog.html` | Product grid, category anchors (static filters), feature lists. |
-| **Product** | `product.html` | Product gallery, specs table, inquiry form, related products. |
-| **About** | `about.html` | Brand story, team photos, embedded video or map. |
-| **Contact** | `contact.html` | Full contact form, business hours table, map iframe. |
-| **FAQ** | `faq.html` | Questions and answers using lists and anchors. |
-| **Policy** | `policy.html` | Shipping & return policies with anchor navigation. |
-| **Gallery** | `gallery.html` | Grid of product photos with captions. |
+|---|---|---|
+| **Home** | `index.html` | Deals banner, flight search form, popular destinations, internal/external links. |
+| **Destinations** | `destinations.html` | Grid of regions (Europe/Asia/America), images, short copy, sample “from ₪”. |
+| **Flight Details** | `flight.html` | Airline, schedule, **price table** (class/baggage), **booking form**, related flights. |
+| **About Us** | `about.html` | Company story, trust & service section, **embedded video/map**. |
+| **Contact** | `contact.html` | **Full form** (name/email/phone/subject/message/select/checkbox), **hours table**, map iframe. |
+| **FAQ** | `faq.html` | Lists of Q&A on booking, cancellations, insurance, name changes. |
+| **Policy** | `policy.html` | Clear policy with internal anchors (pricing/cancellations/changes). |
+| **Gallery** | `gallery.html` | Destination photo **Grid** with `figure/figcaption`. |
 
----
-
-## 🧩 Technologies & Features
-
-### 🏗️ HTML
-- Semantic elements: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`.  
-- At least **3 internal** and **3 external links**.  
-- **Media embeds:** `img`, `video`, `audio`, `iframe`, or `embed`.  
-- **Tables**, **Lists**, and **Forms** included throughout the site.  
-
-### 🎨 CSS
-- **Grid** for catalog and gallery layouts.  
-- **Flexbox** for navigation bars, cards, and forms.  
-- **Media Queries** for at least **2–3 breakpoints**:  
-  - Mobile: 360–480px  
-  - Tablet: 768px  
-  - Desktop: 1200px+  
-- **Animations & Transitions** for hover and subtle motion effects.  
-- **Accessibility basics:** alt text, contrast, focus styles.
-
----
+## 🧩 Tech & Features
+- **Semantic HTML5**: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`.
+- **Links**: ≥3 internal + ≥3 external across the site.
+- **Media**: `img`, optional `video`/`audio`, required `iframe`/`embed`.
+- **Tables & Forms**: pricing/booking/hours.
+- **Responsive (Media Queries)**:
+  - Mobile ≤480px | Tablet 481–1024px | Desktop ≥1025px.
+- **Grid** for catalog/gallery, **Flexbox** for nav/cards/forms.
+- **Accessibility**: `alt`, labels, focus, contrast.
+- **Light animations**: `transition`, `:hover`, `@keyframes`.
 
 ## 🗂️ Folder Structure
-
 ```
 /project-root
   /assets
@@ -66,9 +47,11 @@ This project meets all requirements of **Units 13–20** in the Full-Stack Web D
     layout.css
     components.css
     pages.css
+  /js
+    main.js
   index.html
-  catalog.html
-  product.html
+  destinations.html
+  flight.html
   about.html
   contact.html
   faq.html
@@ -76,108 +59,64 @@ This project meets all requirements of **Units 13–20** in the Full-Stack Web D
   gallery.html
 ```
 
----
+## 👥 Equal Remote Work (Rotation)
+**Shared foundation**
+- **Git/GitHub** with branches: `main`, `feature/home`, `feature/destinations`, `feature/flight`, `feature/contact`, `feature/about`, `feature/faq`, `feature/policy`, `feature/gallery`.  
+- **PR workflow**: feature branch → PR with screenshots → partner review → merge.  
+- **Issues/Milestones**: small tasks per page/section/form/table/media/responsiveness.
 
-## 💻 Design Guidelines
-- Consistent typography (2–3 text sizes).  
-- Simple, limited color palette.  
-- Clear **call-to-action** buttons.  
-- Clean spacing, minimal clutter.  
-- Breadcrumbs in catalog/product pages.  
-- Fully responsive on **mobile, tablet, desktop**.
+**Rotation 1 (~7–8h)**
+- **Partner A**: **Home** (Hero + Search + Popular Destinations) + **Gallery**; set up global CSS (`base/layout/components`) and navbar/footer.
+- **Partner B**: **Destinations** (Grid + static anchors/filters) + first **Flight Details** page (price table + booking form + related flights).
 
----
+**Rotation 2 (~7–8h)**
+- **Partner A** → **Contact** (full form + hours table + map/video) + **FAQ** (lists + anchors).
+- **Partner B** → **About** + **Policy** (rich text, links, embed).
+- Each partner adds **media queries** (2–3 sizes) to their pages and does an **accessibility** pass.
 
-## 🧠 Work Plan (Based on Course Units)
+## 📅 Timeline by Units (20–24h)
+- **Unit 13 (~3h)**: research, wireframes (paper/Figma), sitemap, color/typography decisions, repo & scaffolding.
+- **Units 14–18 (~15h)**: build per rotations + interim reviews and merges.
+- **Unit 19 (~3h)**: responsive/accessibility checks, link validation, micro-animations, image compression, CSS cleanup.
+- **Unit 20 (~3h)**: “Site Map” page for demo, 50/50 presentation split.
 
-### **Unit 13 (~3 hours)**
-- Project definition, sketches, sitemap, and technology research.  
-- Choose color scheme, fonts, and imagery style.  
-- Create base files and folder structure.
+## ✅ Page Checklist
+- [ ] `h1` + meaningful `h2` sections.
+- [ ] Internal + external links.
+- [ ] Images with descriptive `alt`.
+- [ ] **Grid/Flex** layout.
+- [ ] ≥1 breakpoint (preferably 2).
+- [ ] Forms: `label`, `required`, submit to `thank-you.html`.
+- [ ] Tables: `<caption>`, `<thead>/<th>`; clear structure.
 
-### **Units 14–18 (~15 hours)**
-- **Phase 1 (Rotation 1)**  
-  - Partner A → Home + Gallery + Global CSS  
-  - Partner B → Catalog + Product pages  
-- **Phase 2 (Rotation 2)**  
-  - Partner A → Contact + FAQ  
-  - Partner B → About + Policy  
-- Add responsive design and accessibility features.
+## 🧪 Definition of Done
+- [ ] Looks great on mobile/tablet/desktop (no unwanted horizontal scroll).
+- [ ] No broken links.
+- [ ] Clean separation (HTML/CSS/Media).
+- [ ] Basic accessibility (alt/labels/focus/contrast).
+- [ ] PR with description & screenshots approved by partner.
 
-### **Unit 19 (~3 hours)**
-- Cross-testing on all devices.  
-- Add animations and final polish.  
-
-### **Unit 20 (~3 hours)**
-- Prepare presentation and final “Site Map” page.  
-- Both partners present equally.
-
----
-
-## 🧩 Task Tracker
-
-| Task | Partner A | Partner B | Status |
-|------|------------|------------|--------|
-| Repo setup & structure | ✅ | ✅ | ☐ |
-| Home + Gallery pages | ✅ | 🔁 Review | ☐ |
-| Catalog + Product pages | 🔁 Review | ✅ | ☐ |
-| Contact + FAQ pages | ✅ | 🔁 Review | ☐ |
-| About + Policy pages | 🔁 Review | ✅ | ☐ |
-| Responsiveness (all pages) | ✅ | ✅ | ☐ |
-| QA & animations | ✅ | ✅ | ☐ |
-| Final presentation | ✅ | ✅ | ☐ |
-
----
-
-## 🔗 Collaboration & Workflow
-- Use **Git/GitHub** with feature branches:
-  - `main` (stable)
-  - `feature/home`, `feature/catalog`, `feature/contact`, etc.
-- Each partner opens **Pull Requests (PR)** for review before merging.  
-- Use **Issues** for to-do tracking.  
-- Communicate asynchronously — share daily updates:  
-  `Done / Next / Blocked`.  
-- If both work on the same page → split by section.
-
----
-
-## ✅ Definition of Done
-- [ ] Responsive on mobile, tablet, desktop.  
-- [ ] No broken links.  
-- [ ] Proper folder separation (HTML, CSS, Media).  
-- [ ] Accessible content (alt, labels, focus).  
-- [ ] Clean, consistent design.  
-- [ ] Passed mutual review and merged into `main`.
-
----
+## 📋 Starter Task Board
+| Task | Primary (Round 1) | Secondary (Rotation) | Status |
+|---|---|---|---|
+| Repo + structure + base CSS | Both | — | ☐ |
+| Home (Hero, Search, Highlights) | A | B (responsive/polish) | ☐ |
+| Destinations (Grid + static filters) | B | A | ☐ |
+| Flight Details (table + form) | B | A | ☐ |
+| Contact (full form + map) | A | B | ☐ |
+| FAQ (lists + anchors) | A | B | ☐ |
+| About (media/embed) | B | A | ☐ |
+| Policy (text + anchors) | B | A | ☐ |
+| Gallery (Grid + captions) | A | B | ☐ |
+| Responsiveness (all pages) | Both | Both | ☐ |
+| Final QA + light animations | Both | — | ☐ |
+| “Site Map” demo page | Both | — | ☐ |
 
 ## 🌈 Optional Enhancements
-- Light JavaScript:  
-  - Hamburger menu  
-  - Image carousel  
-  - Cart counter in navbar (localStorage demo)
-- SEO tags (title, meta, description).  
-- “Thank You” page for form submission.
-
----
-
-## 🗺️ Presentation
-- Show full website flow and responsiveness.  
-- Demonstrate understanding of:
-  - HTML structure  
-  - CSS layout and media queries  
-  - Collaboration using Git  
-- Split presentation evenly between partners.
-
----
+- Tiny JS: hamburger menu, image carousel, **“flight cart” counter** (localStorage).
+- `thank-you.html` after form submissions.
+- Basic SEO tags (`title`, `meta description`).
 
 ## 🧑‍💻 Authors
 **Partner A:** Guedalia
-**Partner B:** Nerya
-
----
-
-## 🏁 License
-This project was created for academic purposes at **The Jerusalem College of Technology (JCT)** – *Full-Stack Web Development Course* by Prof. Shlomo Kipnis.
-
----
+**Partner B:** Nerya 
