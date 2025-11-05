@@ -14,9 +14,13 @@
 
 <body>
     <header>
+        <!-- navbar -->
         <nav class="navbar container" aria-label="Primary">
             <a class="logo" href="index.html">
-                <img src="assets/icons/logo-horizontal.png" alt="SkyWays logo" />
+                <picture>
+                    <source srcset="assets/icons/logo-stacked.png" media="(max-width: 768px)">
+                    <img src="assets/icons/logo-horizontal.png" alt="SkyWays logo" />
+                </picture>
             </a>
             <ul class="nav-links">
                 <li><a href="destinations.html">Destinations</a></li>
@@ -28,6 +32,86 @@
         </nav>
     </header>
 
+    <main>
+        <!-- head of page -->
+        <section class="hero">
+            <div class="hero__content container">
+                <h1>Explore the World with SkyWays</h1>
+                <p>Find your next adventure at the best price.</p>
+            </div>
+        </section>
+        <!-- search form -->
+        <section class="search container" aria-labelledby="search-title">
+            <h2 id="search-title" class="visually-hidden">Search flights</h2>
+
+            <form class="search-form" method="get" action="flight.html">
+                <label>
+                    From
+                    <input type="text" name="from" placeholder="City or airport" required />
+                </label>
+
+                <label>
+                    To
+                    <input type="text" name="to" placeholder="City or airport" required />
+                </label>
+
+                <label>
+                    Departure
+                    <input type="date" name="date" required />
+                </label>
+
+                <label>
+                    Passengers
+                    <input type="number" name="passengers" min="1" value="1" required />
+                </label>
+
+                <button type="submit" class="btn-primary">Search Flights</button>
+            </form>
+        </section>
+        <!-- popular destinations -->
+        <section class="highlights container" aria-labelledby="popular-title">
+            <h2 id="popular-title">Popular Destinations</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <img src="assets/images/nyc.jpg" alt="New York skyline at dusk" />
+                    <div class="card__body">
+                        <h3>New York</h3>
+                        <p class="muted">From ₪899</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="assets/images/paris.jpg" alt="Eiffel Tower in Paris at sunset" />
+                    <div class="card__body">
+                        <h3>Paris</h3>
+                        <p class="muted">From ₪749</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="assets/images/tokyo.jpg" alt="Tokyo city lights at night" />
+                    <div class="card__body">
+                        <h3>Tokyo</h3>
+                        <p class="muted">From ₪999</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SkyWays Airlines. All rights reserved.</p>
+
+            <ul class="footer-links">
+                <li><a href="policy.html">Policy</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.iata.org/" target="_blank" rel="noopener">IATA</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

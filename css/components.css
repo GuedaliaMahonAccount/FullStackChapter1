@@ -1,0 +1,114 @@
+/* search form */
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.search {
+    margin-top: 10px;
+}
+
+.search-form {
+    background: var(--surface);
+    box-shadow: var(--shadow-1);
+    border-radius: var(--radius);
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.search-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--text-muted);
+    min-width: 220px;
+}
+
+.search-form input {
+    height: 44px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--text);
+}
+
+.search-form input:focus {
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 3px rgba(10, 102, 194, .25);
+    border-color: var(--primary);
+}
+
+.btn-primary {
+    height: 44px;
+    padding: 0 20px;
+    border: none;
+    cursor: pointer;
+    background: var(--primary);
+    color: #fff;
+    border-radius: var(--radius);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: var(--primary-600);
+}
+
+
+
+
+
+
+
+
+/* popular destinations  */
+.highlights {
+    margin-block: 64px;
+}
+
+.highlights h2 {
+    text-align: center;
+    margin: 0 0 16px;
+}
+
+.cards {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-1);
+    overflow: hidden;
+    transition: transform .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+}
+
+.card__body {
+    padding: 16px;
+}
+
+.muted {
+    color: var(--text-muted);
+    margin: 6px 0 0;
+}
