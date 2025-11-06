@@ -963,3 +963,54 @@
         gap: 8px;
     }
 }
+
+
+.site-header {
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 16px 0;
+}
+
+.site-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+}
+
+.nav-links a {
+  margin-right: 16px;
+  text-decoration: none;
+  color: #0F172A;
+  transition: color 0.3s, background 0.3s;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  color: #0A66C2;
+  background: #d2e2f2;
+}
+
+.policy-content h2 {
+  font-size: 28px;
+  margin-top: 32px;
+  color: #0A66C2;
+}
+
+.policy-content p {
+  margin-bottom: 16px;
+}
+
+.policy-content ul {
+  list-style: disc;
+  margin-left: 32px;
+  margin-bottom: 16px;
+}
+
+.note, .tip {
+  background: #F0F4F8;
+  border-left: 4px solid #FFB100;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  font-style: italic;
+}
