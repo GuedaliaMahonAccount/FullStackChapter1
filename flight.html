@@ -18,6 +18,25 @@
 </head>
 
 <body>
+    <header>
+        <!-- navbar -->
+        <nav class="navbar container" aria-label="Primary">
+            <a class="logo" href="index.html">
+                <picture>
+                    <source srcset="assets/icons/logo-stacked.png" media="(max-width: 768px)">
+                    <img src="assets/icons/logo-horizontal.png" alt="SkyWays logo" />
+                </picture>
+            </a>
+            <ul class="nav-links">
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="flight.html">Flights</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
   <header class="booking-header">
     <h1><i class="fa-solid fa-plane-departure"></i> Flight Reservation</h1>
     <p id="trip-info">You are booking a trip to <span id="destination">—</span> for <span id="price">—</span></p>
@@ -82,15 +101,24 @@
     </form>
   </main>
 
-  <footer>
-    <p>© 2025 Royal Travels — Excellence in Every Journey</p>
-  </footer>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SkyWays Airlines. All rights reserved.</p>
+
+            <ul class="footer-links">
+                <li><a href="policy.html">Policy</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.iata.org/" target="_blank" rel="noopener">IATA</a></li>
+            </ul>
+        </div>
+    </footer>
 
   <script>
     // Extract destination and price from URL and display them
     const params = new URLSearchParams(window.location.search);
-    document.getElementById("destination").textContent = params.get("destination") || "Unknown destination";
-    document.getElementById("price").textContent = params.get("price") ? `$${params.get("price")}` : "Unknown price";
+    document.getElementById("destination").textContent = params.get("pkg") || "Paris, France";
+    document.getElementById("price").textContent = params.get("price") ? `$${params.get("price")}` : "1,299$";
   </script>
 </body>
 </html>
