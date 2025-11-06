@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flight Booking</title>
+  <link rel="stylesheet" href="flight.css" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+
+<body>
+  <header class="booking-header">
+    <h1><i class="fa-solid fa-plane-departure"></i> Flight Reservation</h1>
+    <p id="trip-info">You are booking a trip to <span id="destination">—</span> for <span id="price">—</span></p>
+  </header>
+
+  <main class="booking-container">
+    <form class="booking-form" action="thank-you.html" method="get">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="name"><i class="fa-regular fa-user"></i> Full Name *</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <!-- Passport -->
+      <div class="form-group">
+        <label for="passport"><i class="fa-solid fa-passport"></i> Passport Number *</label>
+        <input type="text" id="passport" name="passport" required />
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label for="phone"><i class="fa-solid fa-phone"></i> Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email"><i class="fa-regular fa-envelope"></i> Email</label>
+        <input type="email" id="email" name="email" />
+      </div>
+
+      <!-- Company -->
+      <div class="form-group">
+        <label for="company"><i class="fa-solid fa-building"></i> Company Name</label>
+        <input type="text" id="company" name="company" />
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="form-group">
+        <label for="birthdate"><i class="fa-regular fa-calendar"></i> Date of Birth</label>
+        <input type="date" id="birthdate" name="birthdate" />
+      </div>
+
+      <!-- Kosher -->
+      <div class="form-group checkbox">
+        <label>
+          <input type="checkbox" id="kosher" name="kosher" />
+          <i class="fa-solid fa-utensils"></i> Request Mehadrin Kosher
+        </label>
+      </div>
+
+      <!-- Notes -->
+      <div class="form-group">
+        <label for="notes"><i class="fa-regular fa-note-sticky"></i> Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any special requests or details..."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn">
+        <i class="fa-solid fa-check"></i> Book Now
+      </button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Royal Travels — Excellence in Every Journey</p>
+  </footer>
+
+  <script>
+    // Extract destination and price from URL and display them
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("destination").textContent = params.get("destination") || "Unknown destination";
+    document.getElementById("price").textContent = params.get("price") ? `$${params.get("price")}` : "Unknown price";
+  </script>
+</body>
+</html>

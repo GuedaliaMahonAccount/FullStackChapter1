@@ -1014,3 +1014,114 @@
   border-radius: 8px;
   font-style: italic;
 }
+
+
+
+
+
+
+
+
+
+
+header.booking-header {
+  background: linear-gradient(to right, #000, #222);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header.booking-header h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+header.booking-header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #d4af37; /* Gold accent */
+}
+
+.booking-container {
+  max-width: 700px;
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.3);
+  outline: none;
+}
+
+/* Checkbox */
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.form-group.checkbox label {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #d4af37;
+  color: black;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #c19e32;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+}
