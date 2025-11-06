@@ -1,5 +1,5 @@
 /* hero */
-.hero {
+ .hero , .hero2 {
     position: relative;
     min-height: 50vh;
     display: flex;
@@ -8,13 +8,12 @@
     background: url("../assets/images/hero-plane.jpg") center/cover no-repeat;
     color: #fff;
     text-align: center;
+      position: relative;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .35), rgba(0, 0, 0, .45));
+.hero2{
+    background: url("https://img.mako.co.il/2015/11/10/ThinkstockPhotos_537741795_i.jpg") center/cover no-repeat ;
+    color: #ffffff;
 }
 
 .hero__content {
@@ -1206,10 +1205,12 @@ footer {
 
 .video-wrapper {
   position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
+  width: 80%;
+  padding-bottom: 56.25%; /* יחס 16:9 */
   height: 0;
+  margin: 0 auto; 
 }
+
 
 .video-wrapper iframe {
   position: absolute;
