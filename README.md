@@ -101,14 +101,14 @@ The project will be in english only
 |---|---|---|---|
 | Repo + structure + base CSS | Both | — | ✅ |
 | Home (Hero, Search, Highlights) | A | B (responsive/polish) | ✅ |
-| Destinations (Grid + static filters) | B | A | ☐ |
+| Destinations (Grid + static filters) | B | A | ✅ |
 | Flight Details (table + form) | B | A | ☐ |
 | Contact (full form + map) | A | B | ✅ |
 | Thank You page | A | - | ✅ |
 | FAQ (lists + anchors) | A | B | ✅ |
 | About (media/embed) | B | A | ☐ |
 | Policy (text + anchors) | B | A | ☐ |
-| Gallery (Grid + captions) | A | B | ☐ |
+| Gallery (Grid + captions) | A | B | ✅ |
 | Responsiveness (all pages) | Both | Both | ☐ |
 | Final QA + light animations | Both | — | ☐ |
 | “Site Map” demo page | Both | — | ☐ |
