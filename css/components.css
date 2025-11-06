@@ -13,7 +13,7 @@
 }
 
 .search-form {
-    background: var(--surface);
+    background:#d4ddee;
     box-shadow: var(--shadow-1);
     border-radius: var(--radius);
     padding: 16px;
