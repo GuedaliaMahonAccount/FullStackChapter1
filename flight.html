@@ -114,11 +114,64 @@
         </div>
     </footer>
 
+  <!-- advanced search, with real results -->
   <script>
-    // Extract destination and price from URL and display them
+    // Destination data for search synchronization
+    const destinationMap = {
+      "athens": { name: "Athens, Greece", price: "₪579" },
+      "rome": { name: "Rome, Italy", price: "₪699" },
+      "london": { name: "London, UK", price: "₪499" },
+      "paris": { name: "Paris, France", price: "₪749" },
+      "tokyo": { name: "Tokyo, Japan", price: "₪999" },
+      "newyork": { name: "New York, USA", price: "₪899" },
+      "nyc": { name: "New York, USA", price: "₪899" },
+      "ath": { name: "Athens, Greece", price: "₪579" }, // airport code
+      "fco": { name: "Rome, Italy", price: "₪699" },
+      "lhr": { name: "London, UK", price: "₪499" },
+      "cdg": { name: "Paris, France", price: "₪749" },
+      "nrt": { name: "Tokyo, Japan", price: "₪999" },
+      "jfk": { name: "New York, USA", price: "₪899" },
+      // Additional destinations from packages
+      "kyoto": { name: "Kyoto, Japan", price: "$1200" },
+      "bangkok": { name: "Bangkok, Thailand", price: "$900" },
+      "chiangmai": { name: "Chiang Mai, Thailand", price: "$700" },
+      "beijing": { name: "Beijing, China", price: "$1100" },
+      "goa": { name: "Goa, India", price: "$850" },
+      "barcelona": { name: "Barcelona, Spain", price: "$1250" },
+      "berlin": { name: "Berlin, Germany", price: "$1100" },
+      "toronto": { name: "Toronto, Canada", price: "$1300" },
+      "rio": { name: "Rio de Janeiro, Brazil", price: "$1200" },
+      "cancun": { name: "Cancún, Mexico", price: "$1050" },
+      "cairo": { name: "Cairo, Egypt", price: "$900" },
+      "capetown": { name: "Cape Town, South Africa", price: "$1250" },
+      "marrakech": { name: "Marrakech, Morocco", price: "$950" },
+      "sydney": { name: "Sydney, Australia", price: "$1700" },
+      "queenstown": { name: "Queenstown, New Zealand", price: "$1800" },
+    };
+
+    // Extract parameters from URL
     const params = new URLSearchParams(window.location.search);
-    document.getElementById("destination").textContent = params.get("pkg") || "Paris, France";
-    document.getElementById("price").textContent = params.get("price") ? `$${params.get("price")}` : "1,299$";
+    const to = params.get("to");
+    let dest = "Paris, France";
+    let prc = "1,299$";
+
+    if (to) {
+      // Normalize the 'to' parameter: lowercase, remove spaces and special chars
+      const key = to.toLowerCase().replace(/[^a-z]/g, '');
+      if (destinationMap[key]) {
+        dest = destinationMap[key].name;
+        prc = destinationMap[key].price;
+      }
+    } else {
+      // Fallback to pkg and price params (from destinations.html links)
+      const pkg = params.get("pkg");
+      const price = params.get("price");
+      if (pkg) dest = pkg;
+      if (price) prc = `$${price}`;
+    }
+
+    document.getElementById("destination").textContent = dest;
+    document.getElementById("price").textContent = prc;
   </script>
 </body>
 </html>
