@@ -31,7 +31,9 @@ The project will be in english only
 - **Media**: `img`, optional `video`/`audio`, required `iframe`/`embed`.
 - **Tables & Forms**: pricing/booking/hours.
 - **Responsive (Media Queries)**:
-  - Mobile ≤480px | Tablet 481–1024px | Desktop ≥1025px.
+  - Mobile: max-width: 767px (small screens, single columns, stacked layouts)
+  - Tablet: min-width: 768px and max-width: 1023px (medium screens, 2 columns where appropriate)
+  - Desktop: min-width: 1024px (large screens, full layouts like 3 columns)
 - **Grid** for catalog/gallery, **Flexbox** for nav/cards/forms.
 - **Accessibility**: `alt`, labels, focus, contrast.
 - **Light animations**: `transition`, `:hover`, `@keyframes`.
@@ -106,7 +108,7 @@ The project will be in english only
 | Contact (full form + map) | A | B | ✅ |
 | Thank You page | A | - | ✅ |
 | FAQ (lists + anchors) | A | B | ✅ |
-| About (media/embed) | B | A | ☐ |
+| About (media/embed) | B | A | ✅ |
 | Policy (text + anchors) | B | A | ✅ |
 | Gallery (Grid + captions) | A | B | ✅ |
 | Responsiveness (all pages) | Both | Both | ✅ |
@@ -167,10 +169,9 @@ The design aims to evoke **trust, simplicity, and a modern travel experience**.
 ## 📱 Breakpoints (Responsive Design)
 | Device | Width |
 |---------|--------|
-| **Mobile** | ≤480px |
-| **Tablet** | 481–768px |
-| **Laptop** | 769–1024px |
-| **Desktop** | ≥1280px |
+| **Mobile** | ≤767px |
+| **Tablet** | 768–1023px |
+| **Desktop** | ≥1024px |
 
 ---
 

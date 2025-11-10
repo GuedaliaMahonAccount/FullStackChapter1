@@ -18,16 +18,69 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
     flex: 1;
+    width: 100%;
 }
 
 
 .container{
+  max-width: var(--container);
   margin-inline:auto;
   padding-inline:16px;
+  width: 100%;
+}
+
+/* Mobile: ≤767px */
+@media (max-width: 767px) {
+  .container {
+    padding-inline: 12px;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+}
+
+/* Tablet: 768px-1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding-inline: 24px;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 26px;
+  }
+}
+
+/* Desktop: ≥1024px */
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: 32px;
+  }
+  
+  h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
 }
 
 
