@@ -83,4 +83,9 @@ main {
   }
 }
 
+a {
+  text-decoration: none; /* מסיר קו תחתון */
+}
+
+
 
