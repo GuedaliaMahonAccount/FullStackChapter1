@@ -4,28 +4,87 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 16px;
+    padding: 16px 32px;
     box-shadow: var(--shadow-1);
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    position: relative;
 }
 
 .logo {
     flex-shrink: 0;
     display: flex;
     align-items: center;
+    z-index: 1001;
 }
 
 .logo img {
-    max-height: 80px;
+    max-height: 50px;
     height: auto;
     width: auto;
     max-width: 200px;
     display: block;
     object-fit: contain;
-    object-position: left center;
+}
+
+/* Hide checkbox */
+.nav-toggle {
+    display: none;
+}
+
+/* Hamburger label */
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+}
+
+.nav-toggle-label span::before {
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px;
+}
+
+/* Animate hamburger when checked */
+.nav-toggle:checked~.nav-toggle-label span {
+    background: transparent;
+}
+
+.nav-toggle:checked~.nav-toggle-label span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle:checked~.nav-toggle-label span::after {
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 .nav-links {
@@ -39,87 +98,148 @@
     align-items: center;
 }
 
+.nav-links li {
+    margin: 0;
+}
+
 .nav-links a {
     text-decoration: none;
     color: var(--text);
     font-weight: 500;
     font-size: 16px;
     white-space: nowrap;
+    transition: color 0.2s ease;
+    position: relative;
+    padding: 8px 4px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    height: 2px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .nav-links a:hover {
     color: var(--primary);
 }
 
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
 /* Mobile: ≤767px */
 @media (max-width: 767px) {
     .navbar {
-        flex-direction: column;
-        padding: 16px;
-        gap: 16px;
-        min-height: auto;
-    }
-
-    .logo {
-        width: 100%;
-        justify-content: center;
+        padding: 12px 16px;
+        min-height: 60px;
+        flex-wrap: wrap;
     }
 
     .logo img {
-        max-width: 180px;
-        max-height: 70px;
+        max-height: 40px;
+        max-width: 140px;
+    }
+
+    .nav-toggle-label {
+        display: flex;
     }
 
     .nav-links {
-        gap: 12px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--surface);
+        padding: 0;
+        gap: 0;
+        box-shadow: var(--shadow-1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
         width: 100%;
-        justify-content: center;
+    }
+
+    .nav-toggle:checked~.nav-links {
+        max-height: 500px;
+        padding: 8px 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
     }
 
     .nav-links a {
-        font-size: 14px;
-        padding: 4px 8px;
+        display: block;
+        padding: 16px 24px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links a:hover {
+        background: rgba(0, 0, 0, 0.02);
     }
 }
 
 /* Tablet: 768px-1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
     .navbar {
-        padding: 12px 24px;
+        padding: 14px 24px;
     }
 
     .logo img {
-        max-height: 75px;
+        max-height: 46px;
         max-width: 180px;
     }
 
     .nav-links {
-        gap: 16px;
+        gap: 24px;
     }
 
     .nav-links a {
         font-size: 15px;
+        padding: 6px 4px;
     }
 }
 
 /* Desktop: ≥1024px */
 @media (min-width: 1024px) {
     .navbar {
-        padding: 12px 32px;
+        padding: 16px 48px;
         position: fixed;
+        justify-content: center; /* Center everything horizontally */
     }
 
-    .logo img {
-        max-height: 85px;
-        max-width: 220px;
+    .logo {
+        position: absolute;
+        left: 48px; /* Keep logo on the left */
     }
 
     .nav-links {
-        gap: 28px;
-        width: 100%;
-        justify-content: center;
+        gap: 36px;
+        justify-content: center; /* Center the links */
+    }
+
+    .nav-links a {
+        font-size: 16px;
     }
 }
+
 
 /* Footer styles */
 main {
@@ -149,8 +269,10 @@ main {
     color: var(--primary);
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
+    color: var(--text);
     text-decoration: underline;
 }
