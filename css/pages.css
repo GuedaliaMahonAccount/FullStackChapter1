@@ -12,80 +12,88 @@
   --transition: 0.5s;
 }
 
-/* hero */
- .hero , .hero2 {
-    position: relative;
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url("../assets/images/hero-plane.jpg") center/cover no-repeat;
-    color: #fff;
-    text-align: center;
-      position: relative;
-}
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .35), rgba(0, 0, 0, .45));
-}
 
-.hero2{
-    background: url("https://img.mako.co.il/2015/11/10/ThinkstockPhotos_537741795_i.jpg") center/cover no-repeat ;
-    color: #ffffff;
+
+
+
+
+/* Base hero styles shared */
+.hero, .hero2 {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden; /* prevents scrollbars when the image scales */
 }
 
 .hero__content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 2;
+  padding: 0 16px;
 }
 
 .hero__content h1 {
-    font-size: 40px;
-    margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 0 0 8px;
 }
 
 .hero__content p {
-    font-size: 18px;
-    opacity: .95;
+  font-size: clamp(14px, 2vw, 18px);
+  opacity: .95;
 }
 
-.trending {
-    margin-top: 8px;
+/* Specific to hero2: use an actual <img> instead of CSS background */
+.hero2__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-position: center;
+  background: #000; 
 }
 
-.deals h2,
-.features h2,
-.trending h2,
-.trust h2,
-.newsletter h2,
-.cta h2 {
-    margin-bottom: 8px;
+/* Subtle gradient overlay (like your .hero::before) */
+.hero2__overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.45));
 }
 
-.feature-list , .chip-list{
-    list-style-type: none;
+/* From tablets/desktop up: go immersive and allow cropping */
+@media (min-width: 768px) {
+  .hero2__bg {
+    object-fit: cover;
+  }
 }
 
-@media (max-width: 767px) {
-    .hero {
-        min-height: 56vh;
-    }
+/* Keep your original .hero (home) background image behavior */
+.hero {
+  background: url("../assets/images/hero-plane.jpg") center/cover no-repeat;
+}
 
-    .hero__content h1 {
-        font-size: 32px;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.45));
+  z-index: 1;
+}
 
-    .hero__content p {
-        font-size: 16px;
-    }
-
-    .search-form {
-        flex-direction: column;
-        align-items: stretch;
-    }
+/* Team images: make them responsive and tidy squares */
+.team-member img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 
@@ -776,13 +784,6 @@
     .continent-name {
         font-size: 14px;
     }
-
-    .dropdown {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        box-shadow: none;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1049,7 +1050,7 @@
 
 
 
-
+/* flight */
 .booking-header {
   background: linear-gradient(to right, #000, #222);
   color: white;
@@ -1058,8 +1059,8 @@
   position: relative;
   left: 50%;
   right: 50%;
-  width: 100vw; /* כל רוחב המסך */
-  margin-left: -50vw; /* מושך שמאלה כדי לצאת מהקונטיינר */
+  width: 100vw; 
+  margin-left: -50vw; 
   box-sizing: border-box;
 }
 
@@ -1073,12 +1074,11 @@ header.booking-header h1 {
 header.booking-header p {
   font-size: 1.1rem;
   margin-top: 0.5rem;
-  color: #d4af37; /* Gold accent */
+  color: #d4af37; 
 }
 
 .booking-container {
   max-width: 700px;
-  width: 500px;
   background: white;
   margin: 2rem auto;
   padding: 2rem;
@@ -1153,13 +1153,6 @@ header.booking-header p {
   transform: translateY(-2px);
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: #888;
-  font-size: 0.9rem;
-}
 
 
 

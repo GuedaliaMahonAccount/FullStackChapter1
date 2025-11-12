@@ -13,7 +13,7 @@
 }
 
 .search-form {
-    background:#d4ddee;
+    background: #d4ddee;
     box-shadow: var(--shadow-1);
     border-radius: var(--radius);
     padding: 16px;
@@ -140,6 +140,13 @@
     color: #FFB100;
 }
 
+.features {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .features h2 {
     margin-bottom: 12px;
 }
@@ -147,7 +154,10 @@
 .feature-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    place-items: center; 
     gap: 16px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .feature {
@@ -156,6 +166,7 @@
     border-radius: var(--radius);
     padding: 16px;
     box-shadow: var(--shadow-1);
+    text-align: center; 
 }
 
 .feature__icon {
@@ -345,12 +356,12 @@
     .cards {
         grid-template-columns: 1fr;
     }
-    
+
     .search-form {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .search-form label {
         min-width: 100%;
     }
