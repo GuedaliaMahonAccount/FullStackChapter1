@@ -480,7 +480,7 @@
     padding: 0 20px 16px;
     color: var(--text-muted);
     border-top: 1px solid var(--line);
-    animation: faqFade 180ms ease;
+    animation: faqFade 700ms ease;
 }
 
 .faq-content p {
@@ -503,7 +503,7 @@
 @keyframes faqFade {
     from {
         opacity: 0;
-        transform: translateY(-2px);
+        transform: translateY(-10px);
     }
 
     to {
