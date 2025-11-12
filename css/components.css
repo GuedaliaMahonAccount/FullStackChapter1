@@ -160,6 +160,10 @@
     max-width: 1000px;
 }
 
+li.feature{
+      list-style: none;
+}
+
 .feature {
     background: var(--surface);
     border: 1px solid var(--line);

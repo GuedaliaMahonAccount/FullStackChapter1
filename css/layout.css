@@ -133,8 +133,8 @@
     transform: scaleX(1);
 }
 
-/* Mobile: ≤767px */
-@media (max-width: 767px) {
+/* Mobile: ≤835px */
+@media (max-width: 835px) {
     .navbar {
         padding: 12px 16px;
         min-height: 60px;
@@ -196,8 +196,8 @@
     }
 }
 
-/* Tablet: 768px-1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Tablet: 835px-1023px */
+@media (min-width: 835px) and (max-width: 1023px) {
     .navbar {
         padding: 14px 24px;
     }
