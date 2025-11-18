@@ -133,8 +133,8 @@
     transform: scaleX(1);
 }
 
-/* Mobile: ≤835px */
-@media (max-width: 835px) {
+/* Mobile: ≤850px */
+@media (max-width: 850px) {
     .navbar {
         padding: 12px 16px;
         min-height: 60px;
@@ -218,7 +218,30 @@
 }
 
 /* Desktop: ≥1024px */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1180px) {
+    .navbar {
+        padding: 16px 48px;
+        position: fixed;
+        justify-content: center; /* Center everything horizontally */
+    }
+
+    /* .logo {
+        position: absolute;
+        left: 48px;
+    } */
+
+    .nav-links {
+        gap: 36px;
+        justify-content: center; /* Center the links */
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+}
+
+/* Desktop: ≥1180px */
+@media (min-width: 1180px) {
     .navbar {
         padding: 16px 48px;
         position: fixed;
